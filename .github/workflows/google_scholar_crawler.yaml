@@ -1,13 +1,12 @@
-name: Get Citation Data
+name: Get Citation Data (disabled)
 
 on: 
  workflow_dispatch:
- page_build: 
- schedule:
-  - cron:  '0 8 * * *'
 
 jobs:
   build:
+    # Automatic citation crawling is intentionally disabled.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
